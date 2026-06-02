@@ -8,27 +8,27 @@ import os
 # https://drive.google.com/file/d/12_wt0RbN1ZQfX_PVRNdsMU8XXhbPUk8x/view?usp=drive_link
 
 
-# import gdown
-# import os
-# from tensorflow.keras.models import load_model
+import gdown
+import os
+from tensorflow.keras.models import load_model
 
-# MODEL_PATH = "cnn_model.keras"
+MODEL_PATH = "cnn_model.keras"
 
-# def download_model():
-#     file_id = "12_wt0RbN1ZQfX_PVRNdsMU8XXhbPUk8x"
-#     url = f"https://drive.google.com/uc?id={file_id}"
-#     gdown.download(url, MODEL_PATH, quiet=False)
+def download_model():
+    file_id = "12_wt0RbN1ZQfX_PVRNdsMU8XXhbPUk8x"
+    url = f"https://drive.google.com/uc?id={file_id}"
+    gdown.download(url, MODEL_PATH, quiet=False)
 
-# # Download only if not exists
-# if not os.path.exists(MODEL_PATH):
-#     download_model()
+# Download only if not exists
+if not os.path.exists(MODEL_PATH):
+    download_model()
 
-# model = load_model(MODEL_PATH)
+model = load_model(MODEL_PATH)
 
 
 # Load trained CNN model
 
-model = tf.keras.models.load_model("cnn_model.keras")
+# model = tf.keras.models.load_model("cnn_model.keras")
 # Use actual class names
 
 class_names = [
